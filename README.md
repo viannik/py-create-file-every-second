@@ -9,8 +9,9 @@ Write an app that will create 1 file every 1 second in current directory (where 
 - The app must print to console timestamp and newly created file name when it completes file creation successfully.
 - The app must run forever until you terminate the process.
 
-`datetime.now()` from module `datetime` and `sleep()` from module `time` can be
-relevant here.
+It can be relevant here to use:
+- `datetime.now()` from module `datetime`
+- `sleep()` from module `time`
 
 Example:
 ```python
