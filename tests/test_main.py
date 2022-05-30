@@ -26,10 +26,12 @@ class CleanUpFiles:
 @pytest.mark.parametrize(
     "number_of_files,timestamps,filenames,content_of_the_files,outputs",
     [
-(
+        (
             1,
             [
-                datetime.datetime(year=2022, month=12, day=31, hour=23, minute=59, second=1),
+                datetime.datetime(
+                    year=2022, month=12, day=31, hour=23, minute=59, second=1
+                ),
             ],
             [
                 "app-23_59_01.log",
@@ -39,14 +41,20 @@ class CleanUpFiles:
             ],
             [
                 "2022-12-31 23:59:01 app-23_59_01.log",
-            ]
+            ],
         ),
         (
             3,
             [
-                datetime.datetime(year=2022, month=12, day=31, hour=23, minute=59, second=1),
-                datetime.datetime(year=2022, month=12, day=31, hour=23, minute=59, second=2),
-                datetime.datetime(year=2022, month=12, day=31, hour=23, minute=59, second=3),
+                datetime.datetime(
+                    year=2022, month=12, day=31, hour=23, minute=59, second=1
+                ),
+                datetime.datetime(
+                    year=2022, month=12, day=31, hour=23, minute=59, second=2
+                ),
+                datetime.datetime(
+                    year=2022, month=12, day=31, hour=23, minute=59, second=3
+                ),
             ],
             [
                 "app-23_59_01.log",
@@ -62,9 +70,9 @@ class CleanUpFiles:
                 "2022-12-31 23:59:01 app-23_59_01.log",
                 "2022-12-31 23:59:02 app-23_59_02.log",
                 "2022-12-31 23:59:03 app-23_59_03.log",
-            ]
+            ],
         ),
-    ]
+    ],
 )
 def test_main(
     number_of_files: int,
@@ -94,4 +102,3 @@ def test_main(
             assert os.path.exists(filenames[i])
             with open(filenames[i], "r") as f:
                 assert f.read() == content_of_the_files[i]
-
