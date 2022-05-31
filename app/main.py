@@ -1,5 +1,4 @@
-import datetime
-import time
+from datetime import datetime  # DO NOT CHANGE THIS IMPORT
 
 
 def main():
