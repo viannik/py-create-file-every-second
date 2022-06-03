@@ -30,46 +30,46 @@ class CleanUpFiles:
             1,
             [
                 datetime.datetime(
-                    year=2022, month=12, day=31, hour=23, minute=59, second=1
+                    year=2022, month=12, day=31, hour=23, minute=59, second=11
                 ),
             ],
             [
-                "app-23_59_01.log",
+                "app-23_59_11.log",
             ],
             [
-                "2022-12-31 23:59:01",
+                "2022-12-31 23:59:11",
             ],
             [
-                "2022-12-31 23:59:01 app-23_59_01.log",
+                "2022-12-31 23:59:11 app-23_59_11.log",
             ],
         ),
         (
             3,
             [
                 datetime.datetime(
-                    year=2022, month=12, day=31, hour=23, minute=59, second=1
+                    year=2022, month=12, day=31, hour=23, minute=59, second=11
                 ),
                 datetime.datetime(
-                    year=2022, month=12, day=31, hour=23, minute=59, second=2
+                    year=2022, month=12, day=31, hour=23, minute=59, second=12
                 ),
                 datetime.datetime(
-                    year=2022, month=12, day=31, hour=23, minute=59, second=3
+                    year=2022, month=12, day=31, hour=23, minute=59, second=13
                 ),
             ],
             [
-                "app-23_59_01.log",
-                "app-23_59_02.log",
-                "app-23_59_03.log",
+                "app-23_59_11.log",
+                "app-23_59_12.log",
+                "app-23_59_13.log",
             ],
             [
-                "2022-12-31 23:59:01",
-                "2022-12-31 23:59:02",
-                "2022-12-31 23:59:03",
+                "2022-12-31 23:59:11",
+                "2022-12-31 23:59:12",
+                "2022-12-31 23:59:13",
             ],
             [
-                "2022-12-31 23:59:01 app-23_59_01.log",
-                "2022-12-31 23:59:02 app-23_59_02.log",
-                "2022-12-31 23:59:03 app-23_59_03.log",
+                "2022-12-31 23:59:11 app-23_59_11.log",
+                "2022-12-31 23:59:12 app-23_59_12.log",
+                "2022-12-31 23:59:13 app-23_59_13.log",
             ],
         ),
     ],
